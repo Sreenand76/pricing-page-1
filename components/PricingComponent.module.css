@@ -5,7 +5,7 @@
 
 .background-container {
   background-image: url(/images/bg-pattern.svg);
-  background-size: contain;
+  background-size: 100vw 50vh;
   background-position:top;
   background-repeat: no-repeat;
   min-height: 80vh;
