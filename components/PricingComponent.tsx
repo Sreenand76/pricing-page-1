@@ -77,7 +77,7 @@ const PricingComponent: React.FC = () => {
             </div>
             
              {/* Billing Toggle */}
-            <div className="billing-toggle flex justify-center gap-3 md:mt-5">
+            <div className="billing-toggle flex justify-center items-center gap-3 md:mt-5">
               <div className="flex items-center space-x-2">
                 <span className={`${isYearly ? "text-gray-400 dark:text-gray-600" : "text-gray-600 dark:text-gray-400 font-semibold"} text-xs md:text-base`}>
                   Monthly Billing
@@ -85,9 +85,9 @@ const PricingComponent: React.FC = () => {
                 
                 <div
                   onClick={() => setIsYearly(!isYearly)}
-                  className="w-12 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 bg-light-grayish-blue dark:bg-blue-950"
+                  className="w-9 h-4 md:w-12 md:h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 bg-light-grayish-blue dark:bg-blue-950"
                 >
-                  <div className={`bg-white dark:bg-black w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${isYearly ? 'translate-x-6' : 'translate-x-0'}`}></div>
+                  <div className={`bg-white dark:bg-black w-2 h-2 md:w-4 md:h-4 rounded-full shadow-md transform transition-transform duration-300 ${isYearly ? 'translate-x-6' : 'translate-x-0'}`}></div>
                 </div>
                 
                 <span className={`${isYearly ? "text-gray-600 dark:text-gray-400 font-semibold" : "text-gray-400 dark:text-gray-600"} text-xs md:text-base`}>
