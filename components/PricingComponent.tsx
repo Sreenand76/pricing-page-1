@@ -77,25 +77,28 @@ const PricingComponent: React.FC = () => {
             </div>
             
              {/* Billing Toggle */}
-            <div className="billing-toggle flex justify-center items-center gap-3 md:mt-5">
-              <div className="flex items-center space-x-2">
+           <div className="billing-toggle flex justify-center gap-2 md:gap-3 md:mt-5">
+               <div className="flex items-center space-x-1 md:space-x-2">
                 <span className={`${isYearly ? "text-gray-400 dark:text-gray-600" : "text-gray-600 dark:text-gray-400 font-semibold"} text-xs md:text-base`}>
-                  Monthly Billing
+                Monthly Billing
+               </span>
+
+               <div
+             onClick={() => setIsYearly(!isYearly)}
+              className="w-10 h-5 md:w-12 md:h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 bg-light-grayish-blue dark:bg-blue-950"
+                 >
+             <div className={`bg-white dark:bg-black w-3 h-3 md:w-4 md:h-4 rounded-full shadow-md transform transition-transform duration-300 ${isYearly ? 'translate-x-5 md:translate-x-6' : 'translate-x-0'}`}></div>
+             </div>
+
+                 <span className={`${isYearly ? "text-gray-600 dark:text-gray-400 font-semibold" : "text-gray-400 dark:text-gray-600"} text-xs md:text-base`}>
+            Yearly Billing 
+                 <span className="ml-1 text-[0.6rem] md:text-xs bg-light-grayish-red text-light-red dark:bg-red-950 dark:text-red-300 px-1 py-0.5 rounded-lg">
+             -25%
                 </span>
-                
-                <div
-                  onClick={() => setIsYearly(!isYearly)}
-                  className="w-9 h-4 md:w-12 md:h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 bg-light-grayish-blue dark:bg-blue-950"
-                >
-                  <div className={`bg-white dark:bg-black w-2 h-2 md:w-4 md:h-4 rounded-full shadow-md transform transition-transform duration-300 ${isYearly ? 'translate-x-6' : 'translate-x-0'}`}></div>
-                </div>
-                
-                <span className={`${isYearly ? "text-gray-600 dark:text-gray-400 font-semibold" : "text-gray-400 dark:text-gray-600"} text-xs md:text-base`}>
-                  Yearly Billing <span className="ml-1 text-xs bg-light-grayish-red text-light-red dark:bg-red-950 dark:text-red-300 p-1 rounded-lg">-25%</span>
-                </span>
-              </div>
-            </div>
-            
+             </span>
+           </div>
+         </div>
+
             {/* Features List and CTA Button */}
             <div className="flex flex-col md:flex-row justify-center items-center md:justify-between mt-12 text-sm">
             <ul className="features flex flex-col items-center md:items-start space-y-4">
